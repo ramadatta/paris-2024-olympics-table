@@ -29,17 +29,6 @@ Individual columns for gold, silver, and bronze medals with color-coded backgrou
 - Olympic blue color scheme (#0055A4)
 - Clean, readable typography with proper spacing
 
-## 📁 Repository Contents
-
-```
-├── paris_2024_olympics.R                      # Main R script
-├── medals.csv                                 # Medal data (1,044 rows)
-├── athletes.csv                               # Athlete data
-├── paris_2024_olympics_medal_table.png        # PNG output (1600x900px)
-├── paris_2024_olympics_medal_table.html       # HTML output
-└── README.md                                  # This file
-```
-
 ## 📦 Requirements
 
 ```r
@@ -78,8 +67,6 @@ source("paris_2024_olympics.R")
 ## 📈 Data Source
 
 **Dataset**: [Paris 2024 Olympic Summer Games](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games)  
-**Author**: piterfm on Kaggle  
-**License**: CC BY 4.0
 
 ### Data Processing Steps
 
@@ -106,31 +93,10 @@ source("paris_2024_olympics.R")
 - Actual medal colors for data columns (#FFD700, #C0C0C0, #CD7F32)
 - Subtle backgrounds to avoid overwhelming the data
 
-## 📝 Code Highlights
-
-### Universal Flag Converter
-Converts any ISO country code to emoji flag automatically:
-```r
-code_to_flag <- function(code) {
-  chars <- strsplit(toupper(code), "")[[1]]
-  flag_chars <- sapply(chars, function(c) {
-    intToUtf8(127462 + (utf8ToInt(c) - utf8ToInt("A")))
-  })
-  paste0(flag_chars, collapse = "")
-}
-```
-
-### Dynamic Ranking
-Uses official Olympic ranking method (gold count primary, silver secondary, bronze tertiary):
-```r
-arrange(desc(gold), desc(silver), desc(bronze))
-```
-
 ## 🏆 Contest Submission
 
 **Competition**: Posit Table Contest 2025  
-**Category**: Sports Analytics  
-**Submission Date**: [Your submission date]  
+**Submission Date**: October 3rd,2025  
 
 ### Why This Table Works
 1. **Utility**: Provides actionable insights (efficiency, quality metrics)
@@ -145,8 +111,8 @@ Data: CC BY 4.0 (Kaggle dataset license)
 
 ## 👤 Author
 
-[Sai Rama Sridatta Prakki]  
-[[GitHub Profile](https://github.com/ramadatta)]  
+[Sai Rama Sridatta Prakki](https://www.linkedin.com/in/prakki-sai-rama-sridatta-data/)
+[GitHub Profile](https://github.com/ramadatta) 
 
 Created for Posit Table Contest 2025
 
